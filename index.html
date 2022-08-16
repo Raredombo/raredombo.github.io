@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="mystyle.css">
+    </head>
 <title>Aladdin Gang</title>
 <body>
 <script>
@@ -30,12 +33,8 @@ function animate() {
 animate();
 /* make the image 30% smaller */
 img.style.width = '30%';
-/* make the background color black */
-document.body.style.backgroundColor = 'black';
 /* give the image a trail of 1 second */
 img.style.transition = '0.1s';
-/* give the background this image "https://www.shell.com/energy-and-innovation/the-energy-future/scenarios/shell-scenario-sky/_jcr_content/pagePromo/image.img.960.jpeg/1548184031017/clear-blue-sky.jpeg" */
-document.body.style.backgroundImage = 'url(https://www.shell.com/energy-and-innovation/the-energy-future/scenarios/shell-scenario-sky/_jcr_content/pagePromo/image.img.960.jpeg/1548184031017/clear-blue-sky.jpeg)';
 /* change the image color every second */
 setInterval(function() {
   img.style.filter = 'hue-rotate(' + Math.random() * 360 + 'deg)';
