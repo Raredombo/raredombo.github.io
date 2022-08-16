@@ -40,6 +40,13 @@ document.body.style.backgroundImage = 'url(https://www.shell.com/energy-and-inno
 setInterval(function() {
   img.style.filter = 'hue-rotate(' + Math.random() * 360 + 'deg)';
 }, 1000);
+    
+    var audio = document.createElement('audio');
+audio.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+audio.autoplay = true;
+audio.loop = true;
+document.body.appendChild(audio);
+    
 </script>>
 </body>
 </html>
