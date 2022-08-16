@@ -1,15 +1,45 @@
-<!-- 
-Thanks to:
-https://medium.com/@AmJustSam/how-to-do-css-only-frosted-glass-effect-e2666bafab91 
--->
-<link type="text/css" rel="stylesheet" href="style.css" />
-<div class="blurred-box">
-  <!--  you dont need the user-login-box html  -->
-  <!--  for demo purposes only and its shit  -->
-  <div class="user-login-box">
-    <span class="user-icon"></span>
-    <div class="user-name">Raredombo</div>
-    <input class="user-password" type="text" />
-  </div>
-  
-</div>
+<!DOCTYPE html>
+<html>
+<title>Aladdin Gang</title>
+<body>
+<script>
+    /* give this image gravity but it can't fall further than the window size "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/512px-DVD_logo.svg.png" */
+var img = document.createElement('img');
+img.src = 'https://www.pngmart.com/files/17/Aladdin-Carpet-PNG-Pic.png';
+img.style.position = 'absolute';
+img.style.left = '0px';
+img.style.top = '0px';
+document.body.appendChild(img);
+var imgLeft = 0;
+var imgTop = 0;
+var imgVelocityX = 5;
+var imgVelocityY = 5;
+function animate() {
+  imgLeft += imgVelocityX;
+  imgTop += imgVelocityY;
+  img.style.left = imgLeft + 'px';
+  img.style.top = imgTop + 'px';
+  if (imgLeft + img.width >= window.innerWidth || imgLeft <= 0) {
+    imgVelocityX = -imgVelocityX;
+  }
+  if (imgTop + img.height >= window.innerHeight || imgTop <= 0) {
+    imgVelocityY = -imgVelocityY;
+  }
+  requestAnimationFrame(animate);
+}
+animate();
+/* make the image 30% smaller */
+img.style.width = '30%';
+/* make the background color black */
+document.body.style.backgroundColor = 'black';
+/* give the image a trail of 1 second */
+img.style.transition = '0.1s';
+/* give the background this image "https://www.shell.com/energy-and-innovation/the-energy-future/scenarios/shell-scenario-sky/_jcr_content/pagePromo/image.img.960.jpeg/1548184031017/clear-blue-sky.jpeg" */
+document.body.style.backgroundImage = 'url(https://www.shell.com/energy-and-innovation/the-energy-future/scenarios/shell-scenario-sky/_jcr_content/pagePromo/image.img.960.jpeg/1548184031017/clear-blue-sky.jpeg)';
+/* change the image color every second */
+setInterval(function() {
+  img.style.filter = 'hue-rotate(' + Math.random() * 360 + 'deg)';
+}, 1000);
+</script>>
+</body>
+</html>
