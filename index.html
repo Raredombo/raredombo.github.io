@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<title>Raredombo's Place</title>
+<title>Aladdin Gang</title>
 <body>
 <script>
-    /* give this image gravity but it can't fall further than the window size "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/512px-DVD_logo.svg.png" */
+/* give this image gravity but it can't fall further than the window size "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/512px-DVD_logo.svg.png" */
 var img = document.createElement('img');
 img.src = 'https://www.pngmart.com/files/17/Aladdin-Carpet-PNG-Pic.png';
 img.style.position = 'absolute';
@@ -40,13 +40,10 @@ document.body.style.backgroundImage = 'url(https://www.shell.com/energy-and-inno
 setInterval(function() {
   img.style.filter = 'hue-rotate(' + Math.random() * 360 + 'deg)';
 }, 1000);
-    
-    var audio = document.createElement('audio');
-audio.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
-audio.autoplay = true;
-audio.loop = true;
-document.body.appendChild(audio);
-    
 </script>>
+<audio controls autoplay>
+    <source src="6ix.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>
