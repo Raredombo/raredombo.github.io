@@ -1,6 +1,6 @@
 $(function () {
     count = 0;
-    wordsArray = ["used", "abandoned", "extrovert", "introvert", "nostalgia", "2010", "mike", "suicide", "music", "the greatest", "", "alleen op de wereld"];
+    wordsArray = ["used", "abandoned", "extrovert", "introvert", "nostalgia", "2010", "mike", "suicide", "music", "the greatest", "creativity", "alleen op de wereld"];
     setInterval(function () {
       count++;
       $("#word").fadeOut(400, function () {
