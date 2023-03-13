@@ -1,50 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="mystyle.css">
-    </head>
-<title>alleen op de wereld preview</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alleen Op De Wereld</title>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
 <body>
-<script>
-/* give this image gravity but it can't fall further than the window size "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/512px-DVD_logo.svg.png" */
-var img = document.createElement('img');
-img.src = 'https://www.pngmart.com/files/17/Aladdin-Carpet-PNG-Pic.png';
-img.style.position = 'absolute';
-img.style.left = '0px';
-img.style.top = '0px';
-document.body.appendChild(img);
-var imgLeft = 0;
-var imgTop = 0;
-var imgVelocityX = 5;
-var imgVelocityY = 5;
-function animate() {
-  imgLeft += imgVelocityX;
-  imgTop += imgVelocityY;
-  img.style.left = imgLeft + 'px';
-  img.style.top = imgTop + 'px';
-  if (imgLeft + img.width >= window.innerWidth || imgLeft <= 0) {
-    imgVelocityX = -imgVelocityX;
-  }
-  if (imgTop + img.height >= window.innerHeight || imgTop <= 0) {
-    imgVelocityY = -imgVelocityY;
-  }
-  requestAnimationFrame(animate);
-}
-animate();
-/* make the image 30% smaller */
-img.style.width = '30%';
-/* give the image a trail of 1 second */
-img.style.transition = '0.1s';
-/* change the image color every second */
-setInterval(function() {
-  img.style.filter = 'hue-rotate(' + Math.random() * 360 + 'deg)';
-}, 1000);
-</script>
-<div align="center">
-<audio controls autoplay>
-    <source src="6ix.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-</div>
+  <p>Things ain't what they used to be.</p>
 </body>
 </html>
